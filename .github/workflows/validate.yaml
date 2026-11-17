@@ -1,0 +1,12 @@
+name: validate
+
+on:
+  pull_request:
+
+jobs:
+  flate-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: home-operations/flate/action@v0.7.3
+      - run: flate test
