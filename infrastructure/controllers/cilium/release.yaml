@@ -6,6 +6,10 @@ metadata:
 spec:
   releaseName: cilium
   interval: 15m
+  timeout: 15m
+  upgrade:
+    remediation:
+      retries: 3
   chart:
     spec:
       chart: cilium
