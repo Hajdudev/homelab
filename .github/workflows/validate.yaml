@@ -8,5 +8,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
-      - uses: home-operations/flate/action@v0.7.3
+      - uses: home-operations/flate/action@v0.8.0
       - run: flate test
