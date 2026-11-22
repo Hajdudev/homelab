@@ -9,4 +9,9 @@ jobs:
     steps:
       - uses: actions/checkout@v7
       - uses: home-operations/flate/action@v0.8.0
+        with:
+          # check the whole tree; a main baseline would be moved by the next step
+          base: ""
+      - name: Point branch sources at this PR
+        run: git branch -f main HEAD && git branch -f development HEAD
       - run: flate test
