@@ -9,4 +9,6 @@ jobs:
     steps:
       - uses: actions/checkout@v7
       - uses: home-operations/flate/action@v0.7.3
+      - name: Point branch sources at this PR
+        run: git branch -f main HEAD && git branch -f development HEAD
       - run: flate test
